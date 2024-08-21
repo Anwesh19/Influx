@@ -1,0 +1,187 @@
+
+.info{
+    min-height: 100vh;
+    max-width: 1100px;
+    padding-block: 10rem;
+}
+
+.info-container{
+    max-width: 40%;
+    margin-inline-start: 0.6rem;
+}
+.info-container__one{
+    margin-bottom: 20px;
+    letter-spacing: 0.08rem;
+}
+.info-container__one p{
+    color: grey;
+    font-weight: 300;
+}
+.info-container__two{
+    margin-top: 3rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.6rem;
+}
+
+.info-container__two li{
+    font-size: 1.2rem;
+}
+
+ol {
+    counter-reset: list-counter;
+    list-style: none; 
+    padding-left: 0;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+ol li {
+    position: relative;
+    padding-left: 45px; /* Space for the custom circle */
+    margin-bottom: 10px; /* Space between list items */
+    font-size:22px;
+    font-weight: 400;
+    color: #9d9690;
+}
+
+ol li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #cfb499;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cfb499;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+.stars{
+margin-bottom: 1.2rem;
+}
+.stars img:nth-child(2){
+    width: 2rem;
+    padding-top: 0;
+}
+.stars img{
+    padding-top: 2rem;
+    margin: 2px;
+}
+
+.card-container{
+    width: 60%;
+    margin-inline-start: 3rem;
+}
+
+.card{
+    width: 13rem;
+    height: 15rem;
+    border-radius: 2rem;
+    margin: 0.4rem;
+}
+
+.card h4{
+    color: #cfb499;
+    font-size: 1.17rem;
+}
+
+.card-container>p{
+    color: grey;
+    margin-top: 1rem;
+    width: 80%;
+}
+span{
+    font-size: 0.8rem;
+    color: grey;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .info{
+        flex-direction: column-reverse;
+        padding-block: 1rem;
+        max-width: 100%;
+    }
+
+    .card-container{
+        width: 100%;
+        margin-inline-start: 0;
+    }
+    .info-container__one,
+    .info-container
+    {
+        max-width: 100%;
+        margin: 1rem;
+    }
+    .info-container__one p{
+        font-size: 0.65rem;
+    }
+    .stars h2{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .stars img{
+        padding-top: 0;
+        margin-inline: 5px;
+    }
+    .info-container__two ol li{
+        font-size: 1rem;
+    }
+    .card{
+        width: 9rem;
+        height: 15rem;
+        padding-left: 1rem;
+    }
+    .cards{
+        justify-content: center;
+    }
+    .card h4{
+        font-size: 1rem;
+    }
+    .card p{
+        font-size: 0.8rem;
+    }
+    .card-img-top ,.card-body{
+        margin-left: 0!important;
+    }
+    
+
+    .footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 100px;
+        background-color: black;
+        opacity: 50;
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        width: 100%;
+        align-content: center;
+    }
+    .footer p{
+        font-size: 0.8rem;
+        color: grey;
+        text-align: center;
+        margin-block-start: 5px;
+    }
+    
+    .footer>.btn {
+        margin:10px;
+        width:90%;
+        margin-block-end: 0;
+        margin-inline-start: 20px;
+    }
+    .footer>.learn{
+        display: none;
+    }
+    .card-container P{
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+}
